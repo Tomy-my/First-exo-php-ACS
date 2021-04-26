@@ -3,4 +3,4 @@
 
 //Code à faire ici
 
-$prenom = array ('Tomy', 'Anthony', 'Tony', 'Julien', 'Alice', 'Erwann');
+$prenom = array ('Tomy', 'Anthony', 'Julien', 'Alice');

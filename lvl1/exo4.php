@@ -12,7 +12,7 @@
     <div>
     <?php
     //Code à faire ici
-    echo "Le PHP permet de générer du HTML"
+    echo "<p>Le PHP permet de générer du HTML</p>"
     //Ici je dois utiliser la balise de fermeture de PHP car j'alterne entre HTML et PHP
     ?>
     </div>
