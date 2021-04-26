@@ -1,3 +1,10 @@
+<!-- 
+	
+	OpenClassRoom
+
+
+-- EXO 1 -->
+
 <?php
 try
 {
@@ -32,8 +39,8 @@ $reponse->closeCursor();      //Permet de terminer le traitemant de la requette 
 ?>
 
 
-<!-- EXO 2 -->
 
+<!-- EXO 2 -->
 
 <?php
 
@@ -47,3 +54,48 @@ while ($donnees2 = $reponse2->fetch())
 $reponse2->closeCursor();
 
 ?>
+
+<!-- EXO 3 -->
+
+<?php 
+
+$reponse3 = $bdd->query('SELECT * FROM jeux_video WHERE possesseur=\'Patrick\' AND prix < 20');  // Dans la requette nous voulons sélectionner tous les champs de la table jeux_video lorsque le champ Possesseur est égal à Patrick
+
+while ($donnees3 = $reponse3->fetch() )
+{
+	echo $donnees3['nom'] . ' appartient à ' . $donnees3['possesseur'] . '<br><br>';
+}
+
+$reponse3->closeCursor();
+?>
+
+<!-- EXO 4 -->
+
+<?php
+
+$reponse4= $bdd->query('SELECT nom, prix FROM jeux_video ORDER BY prix'); // Sélectionner tous les champs de jeux_video et ordonner les résultats par prix croissant || en ajoutant DESC à la fin, le classement sera alors par ordre décroissant
+
+while ($donnees4 = $reponse4->fetch())
+{
+	echo $donnees4['nom'] . ' coute ' . $donnees4['prix'] . '€ <br>'; 
+}
+
+$reponse4->closeCursor();
+
+?>
+
+<!-- EXO 45-->
+
+<?php
+
+$reponse5 = $bdd->query('SELECT nom FROM jeux_video LIMIT 0, 10'); // Sélectionner les 10 premiers jeux de la table
+
+while ($donnees5 = $reponse5->fecth())
+{
+	echo $donnees['nom'] . '<br>';
+}
+
+$reponse5->closeCursor();
+
+?>
+
